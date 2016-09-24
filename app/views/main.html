@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-list"></span>Contacts
+                    <div class="pull-right action-buttons">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-cog" style="margin-right: 0px;"></span>
+                            </button>
+                            <ul class="dropdown-menu slidedown">
+                                <li><a href="#"><span class="glyphicon glyphicon-trash"></span>Delete All</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="contact in contactsList">
+                            <div class="contact-info">
+                                <div>
+                                    <div style="width:70px;display:inline-block;">
+                                    <img src="../images/user.png" height="64px" width="64px"/>
+                                    </div>
+                                    <div style="display:inline-block;vertical-align:middle;">
+                                    <span  style="font-size:18px;">{{contact.name}}</span><br>
+                                    <p class="contact-details">
+                                       <small><span><i class="glyphicon glyphicon-phone-alt text-success"/>{{contact.phoneNumber}}</span>
+                                       <span> <i class="glyphicon glyphicon-map-marker text-success"/>{{contact.location}}
+                                       </span>
+                                       </small>
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pull-right action-buttons">
+                                <a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="#" class="trash"><span class="glyphicon glyphicon-trash"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Total Count: <span class="badge">{{totalItems}}</span></h6>
+                        </div>
+                        <div class="col-md-6" ng-if="contactsList.length > 1">
+                            <ul uib-pagination total-items="totalItems" ng-model="$parent.currentPage" ng-change="pageChanged()" class="pagination-sm pull-right" items-per-page="itemsPerPage" max-size="maxSize" previous-text="&lsaquo;" next-text="&rsaquo;" ></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
