@@ -6,3 +6,8 @@
 .panel-body .note-text { font-weight: normal; display:inline-block;margin:0px; }
 .list-group-item:hover { text-decoration: none;background-color: #ddd;}
 .list-group { margin-bottom:0px; }
+.user-avatar{width:70px;display:inline-block;}
+.user-avatar img{width:64px;height:64px;}
+.contact-name{display:inline-block;vertical-align:middle;}
+.contact-name>span{font-size:18px;}
+.contact-list .action-buttons{margin-top:-60px;}

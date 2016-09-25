@@ -17,14 +17,14 @@
                 </div>
                 <div class="panel-body">
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="contact in contactsList">
+                        <li class="list-group-item contact-list" ng-repeat="contact in contactsList">
                             <div class="contact-info">
                                 <div>
-                                    <div style="width:70px;display:inline-block;">
-                                    <img src="../images/user.png" height="64px" width="64px"/>
+                                    <div class="user-avatar">
+                                    <img src="../images/user.png"/>
                                     </div>
-                                    <div style="display:inline-block;vertical-align:middle;">
-                                    <span  style="font-size:18px;">{{contact.name}}</span><br>
+                                    <div class="contact-name">
+                                    <span>{{contact.name}}</span><br>
                                     <p class="contact-details">
                                        <small><span><i class="glyphicon glyphicon-phone-alt text-success"/>{{contact.phoneNumber}}</span>
                                        <span> <i class="glyphicon glyphicon-map-marker text-success"/>{{contact.location}}
